@@ -16,5 +16,8 @@ document.getElementById("idTest").innerHTML = x + y;
 document.getElementById("classTest").innerHTML = a - x;
 document.getElemenstByClassName("demo").innerHTML = a - x;
 
-function
+function myTestFunction() {
+  var list = document.getElementsByClassName("example")[0];
+  list.getElementsByClassName("drink")[0].innerHTML = "Milk";
+}
 
