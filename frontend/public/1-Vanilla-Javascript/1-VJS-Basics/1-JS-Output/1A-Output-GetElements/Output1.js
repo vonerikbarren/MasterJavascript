@@ -16,3 +16,5 @@ document.getElementById("idTest").innerHTML = x + y;
 document.getElementById("classTest").innerHTML = a - x;
 document.getElemenstByClassName("demo").innerHTML = a - x;
 
+function
+
