@@ -16,8 +16,14 @@ document.getElementById("idTest").innerHTML = x + y;
 document.getElementById("classTest").innerHTML = a - x;
 document.getElemenstByClassName("demo").innerHTML = a - x;
 
+// -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+// --> Testing of getElementByClassName() <--
+// -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
 function myTestFunction() {
   var list = document.getElementsByClassName("example")[0];
   list.getElementsByClassName("drink")[0].innerHTML = "Milk";
 }
+
+
 
