@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Basic JavaScript DOM practice.</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Here we create a bit of CSS for classes called ".fancy" -->
+  <style>
+    .fancy {
+      font-size: 100px;
+      color: green;
+    }
+
+    .test {
+      font-size: 50px;
+      color: darkmagenta;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="jumbotron">
+          <div id="empty-div" class="text-center"></div>
+
+          <hr>
+
+          <div id="empty-div-1" class="text-center"></div>
+
+          <hr />
+
+          <div id="empty-div-2"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript">
+
+    var targetDiv = document.getElementById("empty-div");
+
+    targetDiv.textContent = "Hello friends!";
+
+    var newDiv = document.createElement("div");
+    newDiv.textContent = "A pleasure to meet you!";
+
+    targetDiv.appendChild(newDiv);
+
+    // We then apply that CSS to our newDiv.
+    newDiv.setAttribute("class", "fancy");
+
+
+    // -=-=-=-=-=-=-=
+    // Practice #1 - 
+    // -=-=-=-=-=-=-=
+    var emptyDiv1 = document.getElementById("empty-div-1");
+    emptyDiv1.textContent = "1.This is assignment 1A";
+    emptyDiv1.setAttribute("class", "test");
+
+    var newDiv1 = document.createElement("div");
+    newDiv1.textContent = "This is assignment 1B";
+    emptyDiv1.appendChild(newDiv1);
+
+    // -=-=-=-=-=-=-=
+    // Practice #2 - 
+    // -=-=-=-=-=-=-=
+    var emptyDiv2 = document.getElementById("empty-div2");
+    emptyDiv2.textContent = "2. This is assignment 2A";
+
+    // -=-=-=-=-=-=-=
+    // Practice #1 - 
+    // -=-=-=-=-=-=-=
+
+    // -=-=-=-=-=-=-=
+    // Practice #1 - 
+    // -=-=-=-=-=-=-=
+
+    // -=-=-=-=-=-=-=
+    // Practice #1 - 
+    // -=-=-=-=-=-=-=
+
+
+
+
+
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

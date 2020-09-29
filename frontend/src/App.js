@@ -12,7 +12,7 @@ function App() {
         </p>
 
         <p>
-          Greysi can suck me dry Today.
+          Hello There my Pretty and your little dog too!
         </p>
         <a
           className="App-link"
@@ -20,7 +20,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          React Application
+
         </a>
       </header>
     </div>
