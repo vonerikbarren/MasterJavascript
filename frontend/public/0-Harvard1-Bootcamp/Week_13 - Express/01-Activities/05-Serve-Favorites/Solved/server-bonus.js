@@ -15,19 +15,19 @@ function handleRequest(req, res) {
   // When we visit different urls, call the function with different arguments
   switch (path) {
 
-  case "/food":
-  case "/movies":
-  case "/frameworks":
-    return renderHTML(path + ".html", res);
+    case "/food":
+    case "/movies":
+    case "/frameworks":
+      return renderHTML(path + ".html", res);
 
-  default:
-    return renderHTML("/index.html", res);
+    default:
+      return renderHTML("/index.html", res);
   }
 }
 
 // function to take a filepath and respond with html
 function renderHTML(filePath, res) {
-  return fs.readFile(__dirname + filePath, function(err, data) {
+  return fs.readFile(__dirname + filePath, function (err, data) {
     if (err) throw err;
     res.writeHead(200, { "Content-Type": "text/html" });
     res.end(data);
@@ -35,6 +35,6 @@ function renderHTML(filePath, res) {
 }
 
 // Starts our server.
-server.listen(PORT, function() {
+server.listen(PORT, function () {
   console.log("Server is listening on PORT: " + PORT);
 });

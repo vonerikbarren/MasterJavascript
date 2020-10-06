@@ -34,17 +34,17 @@ var characters = [
 ];
 
 // Routes
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.send("Welcome to the Star Wars Page!");
 });
 
 // Displays all characters
-app.get("/api/characters", function(req, res) {
+app.get("/api/characters", function (req, res) {
   return res.json(characters);
 });
 
 // Displays a single character, or shows "No character found"
-app.get("/api/characters/:character", function(req, res) {
+app.get("/api/characters/:character", function (req, res) {
   var chosen = req.params.character;
 
   console.log(chosen);
@@ -60,7 +60,7 @@ app.get("/api/characters/:character", function(req, res) {
 });
 
 // Create New Characters - takes in JSON input
-app.post("/api/characters", function(req, res) {
+app.post("/api/characters", function (req, res) {
   var newCharacter = req.body;
 
   console.log(newCharacter);
@@ -70,6 +70,6 @@ app.post("/api/characters", function(req, res) {
   res.json(newCharacter);
 });
 
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
 });
