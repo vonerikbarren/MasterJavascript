@@ -19,7 +19,7 @@ var http = require("http");
 var fs = require("fs");
 
 // Section 2: Set our port to 9000;
-var PORT = 8070;
+var PORT = 8076;
 
 // Section 3: Create our server
 var server = http.createServer(handleRequest);
@@ -29,7 +29,8 @@ function handleRequest(req, res) {
   fs.readFile(__dirname + "/index.html", function (err, data) {
     if (err) throw err;
 
-    res.writeHead(200, { "Cotet-Type": "text/html" });
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.end(data);
   });
 }
 
@@ -37,3 +38,13 @@ function handleRequest(req, res) {
 server.listen(PORT, function () {
   console.log("Server is listening on PORT: " + PORT);
 });
+
+// -=-=-=-==-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=
+// --=-=-=-=---- Important  =---=-=-=-=-=-=-=-=
+// -=-=-=-==-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=
+
+// when using the handleRequest function, make sure that I have the following:
+// 1 - fs.readfile method
+// 2 - The function(err, data)
+// 3 - res.writeHead(Number, {Content-Type}: "text/html");
+// 4 - res.end(data);
