@@ -41,10 +41,10 @@ var serverTwo = http.createServer(handleRequestTwo);
 // STEP 5: We then START our servers.
 serverOne.listen(PORTONE, function () {
 
-  console.log("Server listening on http://localhost:" + PORTONE + "sir. ");
+  console.log("Server listening on http://localhost:" + PORTONE + ", sir. ");
 });
 
 serverTwo.listen(PORTTWO, function () {
 
-  console.log("Server listening on http://localhost:" + PORTTWO + "sir. ");
+  console.log("Server listening on http://localhost:" + PORTTWO + ", sir. ");
 });
