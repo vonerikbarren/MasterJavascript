@@ -26,10 +26,24 @@
 // [ I.A. Imports: React ] -> -=-=-=-=-=-=-=-=-=-=-=-=|
 import React from 'react';
 
-// [ Section Code + Title ] -> -=-=-=-=-=-=-=-=-=-=-=-=
+// [ I.B. Imports: Design Library ] -> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
-// [ Section Code + Title ] -> -=-=-=-=-=-=-=-=-=-=-=-=
+// [ I.C. Imports: CSS ] -> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+// [ I.D. Imports: Components ] -> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+// [ II.A. - functional component ] -> -=-=-=-=-=-=-=-=-=-=-=-=
+export default function testComponent() {
+
+  return (
+    <div>
+
+    </div>
+  );
+}
 
 ``` 
 
