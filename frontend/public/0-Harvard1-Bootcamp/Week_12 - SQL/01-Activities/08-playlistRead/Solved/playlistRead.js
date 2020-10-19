@@ -10,11 +10,11 @@ var connection = mysql.createConnection({
   user: "root",
 
   // Your password
-  password: "",
+  password: "root",
   database: "playlistDB"
 });
 
-connection.connect(function(err) {
+connection.connect(function (err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId);
   queryAllSongs();
@@ -22,7 +22,7 @@ connection.connect(function(err) {
 });
 
 function queryAllSongs() {
-  connection.query("SELECT * FROM songs", function(err, res) {
+  connection.query("SELECT * FROM songs", function (err, res) {
     if (err) throw err;
     for (var i = 0; i < res.length; i++) {
       console.log(res[i].id + " | " + res[i].title + " | " + res[i].artist + " | " + res[i].genre);
@@ -32,7 +32,7 @@ function queryAllSongs() {
 }
 
 function queryDanceSongs() {
-  var query = connection.query("SELECT * FROM songs WHERE genre=?", ["Dance"], function(err, res) {
+  var query = connection.query("SELECT * FROM songs WHERE genre=?", ["Dance"], function (err, res) {
     if (err) throw err;
     for (var i = 0; i < res.length; i++) {
       console.log(res[i].id + " | " + res[i].title + " | " + res[i].artist + " | " + res[i].genre);
