@@ -12,36 +12,36 @@ var outputNum;
 // Determines the operand selected...
 // Based on the operand we run the appropriate math on the two numbers
 switch (operand) {
-case "add":
-  outputNum = parseFloat(num1) + parseFloat(num2);
-  break;
+  case "add":
+    outputNum = parseFloat(num1) + parseFloat(num2);
+    break;
 
-case "subtract":
-  outputNum = parseFloat(num1) - parseFloat(num2);
-  break;
+  case "subtract":
+    outputNum = parseFloat(num1) - parseFloat(num2);
+    break;
 
-case "multiply":
-  outputNum = parseFloat(num1) * parseFloat(num2);
-  break;
+  case "multiply":
+    outputNum = parseFloat(num1) * parseFloat(num2);
+    break;
 
-case "divide":
-  outputNum = parseFloat(num1) / parseFloat(num2);
-  break;
+  case "divide":
+    outputNum = parseFloat(num1) / parseFloat(num2);
+    break;
 
-case "remainder":
-  outputNum = parseFloat(num1) % parseFloat(num2);
-  break;
+  case "remainder":
+    outputNum = parseFloat(num1) % parseFloat(num2);
+    break;
 
-case "exp":
-  outputNum = Math.pow(num1, num2);
-  break;
+  case "exp":
+    outputNum = Math.pow(num1, num2);
+    break;
 
-case "algebra":
-  outputNum = parseAlgebra(num1);
-  break;
+  case "algebra":
+    outputNum = parseAlgebra(num1);
+    break;
 
-default:
-  outputNum = "Not a recognized command";
+  default:
+    outputNum = "Not a recognized command";
 }
 
 // Prints the outputNumber

@@ -20,4 +20,4 @@ fs.readFile("movies.txt", "utf8", function(error, data) {
   // We will then re-display the content as an array for later use.
   console.log(dataArr);
 
-});
+}); 

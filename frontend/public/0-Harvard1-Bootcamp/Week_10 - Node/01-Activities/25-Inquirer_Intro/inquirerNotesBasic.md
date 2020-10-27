@@ -65,7 +65,7 @@ inquirer
     },
      // Prompt Type: Basic Text Prompt
     {
-      type: "input",
+      type: "confirm",
       message: "What is your first name?",
       name: "FirstName"
     },
@@ -78,5 +78,17 @@ inquirer
       console.log()
     }
   });
+
+// Make a seperator by doing the following: 
+  // In the question object
+choices: [ "Choice A", new inquirer.Separator(), "choice B" ]
+
+// Which'll be displayed this way
+[?] What do you want to do?
+ > Order a pizza
+   Make a reservation
+   --------
+   Ask opening hours
+   Talk to the receptionist
 
 ```
