@@ -6,6 +6,7 @@ export default function HomePage() {
   return (
     <div className="HomePage">
       <h1 className="TopTitle">Master React Home Page</h1>
+      <h3>Building a Library</h3>
 
       <h2>Table of Contents</h2>
       <hr />
