@@ -1,4 +1,4 @@
-$(document).ready(function() {
+ff$(document).ready(function () {
 
   var animals = [
     "dog", "cat", "rabbit", "hamster", "skunk", "goldfish",
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
   }
 
-  $(document).on("click", ".animal-button", function() {
+  $(document).on("click", ".animal-button", function () {
     $("#animals").empty();
     $(".animal-button").removeClass("active");
     $(this).addClass("active");
@@ -33,7 +33,7 @@ $(document).ready(function() {
       url: queryURL,
       method: "GET"
     })
-      .then(function(response) {
+      .then(function (response) {
         var results = response.data;
 
         for (var i = 0; i < results.length; i++) {
@@ -61,7 +61,7 @@ $(document).ready(function() {
       });
   });
 
-  $(document).on("click", ".animal-image", function() {
+  $(document).on("click", ".animal-image", function () {
 
     var state = $(this).attr("data-state");
 
@@ -75,7 +75,7 @@ $(document).ready(function() {
     }
   });
 
-  $("#add-animal").on("click", function(event) {
+  $("#add-animal").on("click", function (event) {
     event.preventDefault();
     var newAnimal = $("input").eq(0).val();
 
