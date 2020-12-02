@@ -45,7 +45,7 @@ var ExampleSchema = new Schema({
     type: String,
     validate: [
       // Function takes in the new `longstring` value to be saved as an argument
-      function(input) {
+      function (input) {
         // If this returns true, proceed. If not, return the error message below
         return input.length >= 6;
       },

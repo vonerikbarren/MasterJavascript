@@ -15,3 +15,48 @@ const logTired = beenWorkingAllDay => {
 };
 
 logTired(true);
+
+
+var age = 26;
+const beverageChoice = (age) => {
+  beverage = (age >= 21) ? "Beer" : "Juice";
+  console.log(beverage);
+}
+
+beverageChoice(11);
+
+
+
+let smashBattlespace = {
+  normalDimensions: {
+    yTop: 2160,
+    yBottom: -2160,
+    xLeft: -3840,
+    xRight: 3840,
+    zFront: -10,
+    zBack: 10
+  },
+  largeDimensions: {
+    yTop: -3360,
+    yBottom: 3360,
+    xLeft: -5840,
+    xRight: 5840,
+    zFront: -10,
+    zBack: 10
+  }
+}
+
+var yTop = smashBattlespace.normalDimensions.yTop;
+
+const criticalDeathHitVertical = (damageVerticalHitCounter, yTop) => {
+  hit = (damageVerticalHitCounter > yTop) ? "Stock minus 1" : "Stock Stays At 3"
+  console.log(hit);
+}
+
+criticalDeathHitVertical(3000, yTop);
+
+criticalDeathHitVertical(2000, yTop);
+
+
+
+

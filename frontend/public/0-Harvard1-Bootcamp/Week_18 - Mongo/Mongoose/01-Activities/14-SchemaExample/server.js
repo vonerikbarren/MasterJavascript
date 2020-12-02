@@ -5,7 +5,7 @@ var mongoose = require("mongoose");
 var Example = require("./exampleModel.js");
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/schemaexample", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/schemaexample", { useNewUrlParser: true }, { useUnifiedTopology: true });
 
 // Create an object containing dummy data to save to the database
 var data = {
@@ -18,11 +18,11 @@ var data = {
 
 // Save a new Example using the data object
 Example.create(data)
-  .then(function(dbExample) {
+  .then(function (dbExample) {
     // If saved successfully, print the new Example document to the console
     console.log(dbExample);
   })
-  .catch(function(err) {
+  .catch(function (err) {
     // If an error occurs, log the error message
     console.log(err.message);
   });
